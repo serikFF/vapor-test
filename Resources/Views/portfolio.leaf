@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Портфолио</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <!-- Шапка -->
+    <header class="bg-primary text-white text-center py-5">
+        <div class="container">
+            <h1 class="display-4">iOS разработчик Денис</h1>
+        </div>
+    </header>
+
+    <!-- Контактная информация -->
+    <section class="py-5">
+        <div class="container text-center">
+            <h2>Свяжитесь со мной</h2>
+            <p class="lead">
+                Телефон: <a href="tel:#(phone)">#(phone)</a><br>
+                Telegram: <a href="https://t.me/#(telegramUsername)" target="_blank">@#(telegramUsername)</a><br>
+                GitHub: <a href="https://github.com/#(githubUsername)" target="_blank">github.com/#(githubUsername)</a>
+            </p>
+        </div>
+    </section>
+
+    <!-- Проекты -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5">Мои проекты</h2>
+            #for(project in projects):
+                <div class="mb-5">
+                    <a href="#(project.githubURL)" target="_blank" class="text-decoration-none">
+                        <div class="card">
+                            <div class="card-body">
+                                <h3 class="card-title text-center">#(project.title)</h3>
+                                #if(project.gifURLs):
+                                    <div class="project-images">
+                                        #for(gifURL in project.gifURLs):
+                                            <img src="#(gifURL)" alt="Демонстрация #(project.title)">
+                                        #endfor
+                                    </div>
+                                #else:
+                                    <p>Нет доступных GIF</p>
+                                #endif
+
+                                <div class="card-text">
+                                    #if(project.description):
+                                        <p>#(project.description)</p>
+                                    #else:
+                                        <p>Описание недоступно</p>
+                                    #endif
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            #endfor
+        </div>
+    </section>
+
+    <!-- Подвал -->
+    <footer class="bg-primary text-white text-center py-3">
+        <div class="container">
+            &copy; 2024 
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

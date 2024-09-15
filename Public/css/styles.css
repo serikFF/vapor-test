@@ -1,0 +1,94 @@
+body {
+    font-family: 'Roboto', sans-serif;
+}
+.bg-custom {
+    background-color: #343a40;
+}
+.text-custom {
+    color: #343a40;
+}
+a {
+    color: black;
+    text-decoration: none;
+}
+a:hover {
+    color: black;
+}
+.card:hover {
+    transform: translateY(-5px);
+    transition: transform 0.2s;
+}
+.card a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.card a:hover {
+    color: black;
+    text-decoration: none;
+}
+
+/* Стили для изображений */
+.project-images {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+.project-images img {
+    max-width: 100%;
+    height: auto;
+    margin: 5px;
+    width: 200px; /* Вы можете изменить размер изображений здесь */
+}
+@media (min-width: 576px) {
+    .project-images img {
+        width: 150px;
+    }
+}
+/* Стили для Markdown */
+//.card-text h2, .card-text h3, .card-text h4, .card-text h5, .card-text h6 {
+//    margin-top: 1em;
+//    margin-bottom: 0.5em;
+//}
+//.card-text p {
+//    margin: 0.5em 0;
+//}
+//.card-text ul {
+//    list-style-type: disc;
+//    padding-left: 1.2em;
+//    margin: 0.5em 0;
+//}
+//.card-text ol {
+//    list-style-type: decimal;
+//    padding-left: 1.2em;
+//    margin: 0.5em 0;
+//}
+//.card-text a {
+//    color: #007bff;
+//    text-decoration: none;
+//}
+//.card-text a:hover {
+//    text-decoration: underline;
+//}
+//.card-text blockquote {
+//    border-left: 4px solid #ccc;
+//    padding-left: 1em;
+//    color: #666;
+//    margin: 1em 0;
+//}
+//.card-text code {
+//    background-color: #f8f8f8;
+//    padding: 2px 4px;
+//    font-family: monospace;
+//    font-size: 0.95em;
+//    border-radius: 4px;
+//}
+//.card-text pre {
+//    background-color: #f8f8f8;
+//    padding: 1em;
+//    overflow-x: auto;
+//    font-family: monospace;
+//    font-size: 0.95em;
+//    border-radius: 4px;
+//}
